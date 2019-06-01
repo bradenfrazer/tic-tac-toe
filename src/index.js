@@ -107,19 +107,22 @@ class Game extends React.Component {
     }
 
     return (
+			  <div className="wrapper">
           <div className="game">
-          <div className="game-player">{status}</div>
-          <div className="game-board">
-            <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-            />
+          	<div className="game-board">
+	            <Board
+	            squares={current.squares}
+	            onClick={(i) => this.handleClick(i)}
+	            />
             </div>
-            <div className="game-info">
-            <h2>Move List</h2>
-            <ol>{moves}</ol>
+	            <div className="game-info">
+							<h1>Tic Tac Toe</h1>
+							<div className="game-player"><h2>{status}</h2></div>
+	            <h2 className="game-list">Move List</h2>
+	            <ol>{moves}</ol>
             </div>
-      </div>
+      		</div>
+				</div>
     );
   }
 }
